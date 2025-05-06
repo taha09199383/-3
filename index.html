@@ -188,11 +188,36 @@
   
     <a href="https://wa.me/201274861029?text=السلام عليكم، حابب أشارك في الصدقة الجارية." 
    target="_blank"
-   style="display: inline-flex; align-items: center; background-color: #25D366; color: white; padding: 10px 20px; border-radius: 8px; text-decoration: none; font-family: Arial, sans-serif; font-size: 16px;">
-   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" 
-        alt="WhatsApp" 
-        style="width: 24px; height: 24px; margin-right: 10px;">
-   لعمل صدقة جارية اضغط هنا
+  <!-- زر الواتساب -->
+  <a href="https://wa.me/201274861029" target="_blank" style="text-decoration: none;">
+    <button style="padding: 10px 15px; background-color: #25D366; color: white; border: none; border-radius: 5px; cursor: pointer;">
+لتواصل لعمل صدقه جاريه اضغط هنا 
+    </button>
+  </a>
+
+  <!-- زر نسخ رابط الموقع -->
+  <button onclick="copyLink()" style="padding: 10px 15px; background-color: #1d72b8; color: white; border: none; border-radius: 5px; cursor: pointer;">
+    نسخ رابط الموقع
+  </button>
+
+  <!-- الرسالة -->
+  <span id="copiedAlert" style="display: none; background-color: #4caf50; color: white; padding: 8px 12px; border-radius: 5px;">
+    تم النسخ!
+  </span>
+</div>
+
+<script>
+  function copyLink() {
+    const link = "https://tahapage.github.io"; // حط هنا رابط موقعك
+    navigator.clipboard.writeText(link).then(function () {
+      const alertBox = document.getElementById("copiedAlert");
+      alertBox.style.display = "inline-block";
+      setTimeout(() => {
+        alertBox.style.display = "none";
+      }, 2000);
+    });
+  }
+</script>
 </a>
   </div>
 
@@ -277,4 +302,22 @@ window.addEventListener("load", () => {
   }, 100);
 });
 </script>
+<div style="margin-top: 50px; padding: 20px; border-top: 2px solid #ccc;">
+  <h2 style="text-align: center;">كيفية النشر على فيسبوك</h2>
+
+  <div style="margin-top: 30px;">
+    <h3>الخطوة 1</h3>
+    <img src="https://i.postimg.cc/vmdxtgYQ/Screenshot-Chrome.jpg" alt="الخطوة 1" style="width: 100%; max-width: 500px; display: block; margin: 10px auto;">
+  </div>
+
+  <div style="margin-top: 30px;">
+    <h3>الخطوة 2</h3>
+    <img src="https://i.postimg.cc/MGbMP6H1/Screenshot-Gallery.jpg" alt="الخطوة 2" style="width: 100%; max-width: 500px; display: block; margin: 10px auto;">
+  </div>
+
+  <div style="margin-top: 30px;">
+    <h3>الخطوة 3</h3>
+    <img src="https://i.postimg.cc/kGD2gWcy/Screenshot-Facebook.jpg" alt="الخطوة 3" style="width: 100%; max-width: 500px; display: block; margin: 10px auto;">
+  </div>
+</div>
 </html> 
